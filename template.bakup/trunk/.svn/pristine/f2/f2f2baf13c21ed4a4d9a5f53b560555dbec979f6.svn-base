@@ -1,5 +1,0 @@
-conf.mrile.log.base=/opt/logs/mrile
-conf.mrile.log.level=DEBUG
-
-mrile.log.base=${conf.mrile.log.base}
-mrile.log.level=${conf.mrile.log.level}

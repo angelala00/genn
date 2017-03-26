@@ -1,5 +1,0 @@
-conf.mrile.log.base=D:/server/apache-tomcat-7.0.47/logs/mrile
-conf.mrile.log.level=DEBUG
-
-mrile.log.base=${conf.mrile.log.base}
-mrile.log.level=${conf.mrile.log.level}
