@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/views/decorators">
+    <excludes>
+        <pattern>*.css</pattern>
+        <pattern>*.js</pattern>
+        <pattern>/static/*</pattern>
+        <pattern>/page/help</pattern>
+        <pattern>/admin/stat/*</pattern>
+        <pattern>*.html</pattern>
+    </excludes>
+
+    <decorator name="welcome" page="welcome.jsp">
+        <pattern>/</pattern>
+    </decorator>
+    <decorator name="standard" page="standard.jsp">
+        <pattern>/admin</pattern>
+    </decorator>
+    <decorator name="standard" page="standard.jsp">
+        <pattern>/admin/**</pattern>
+    </decorator>
+</decorators>

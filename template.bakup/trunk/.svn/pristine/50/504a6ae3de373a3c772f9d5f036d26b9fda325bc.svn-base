@@ -1,0 +1,3 @@
+conf.mrile.log.level=INFO
+
+mrile.log.level=${conf.mrile.log.level}

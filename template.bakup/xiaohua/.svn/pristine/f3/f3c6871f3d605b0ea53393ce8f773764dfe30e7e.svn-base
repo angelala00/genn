@@ -1,0 +1,151 @@
+<configuration>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="crap" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/crap.log</File>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} [%file:%line] %msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/crap-%d.%i.log</fileNamePattern>
+            <maxHistory>100</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <appender name="integral" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/integral.log</File>
+        <encoder>
+            <Pattern>%date-%msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/integral-%d.%i.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <appender name="exchange" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/exchange.log</File>
+        <encoder>
+            <Pattern>%date-%msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/exchange-%d.%i.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <appender name="access" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/access.log</File>
+        <encoder>
+            <Pattern>%date-%msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/access-%d.%i.log</fileNamePattern>
+            <maxHistory>100</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="yijifen" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/yijifen.log</File>
+        <encoder>
+            <Pattern>%date-%msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/yijifen-%d.%i.log</fileNamePattern>
+            <maxHistory>100</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+
+    <appender name="promotion" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>../logs/crap/promotion.log</File>
+        <encoder>
+            <Pattern>%date-%msg%n</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>../logs/crap/promotion-%d.%i.log</fileNamePattern>
+            <maxHistory>100</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="com.cjteam.xiao.service.impl.IntegralServiceImpl.INTEGRAL">
+        <level value="WARN"/>
+        <appender-ref ref="integral"/>
+    </logger>
+
+    <logger name="com.cjteam.xiao.web.controller.ScoreCallBackController.INTEGRAL">
+        <level value="WARN"/>
+        <appender-ref ref="integral"/>
+    </logger>
+
+    <logger name="com.cjteam.xiao.service.impl.ExchangeServiceImpl.EXCHANGE">
+        <level value="WARN"/>
+        <appender-ref ref="exchange"/>
+    </logger>
+    <logger name="com.cjteam.xiao.web.controller.ExchangeController.EXCHANGE">
+        <level value="WARN"/>
+        <appender-ref ref="exchange"/>
+    </logger>
+
+    <logger name="com.phoenix.wajin.*.ACCESS">
+        <level value="INFO"/>
+        <appender-ref ref="access"/>
+        <appender-ref ref="crap"/>
+    </logger>
+    <logger name="com.phoenix.wajin.*.YIJIFEN">
+        <level value="INFO"/>
+        <appender-ref ref="yijifen"/>
+    </logger>
+
+    <logger name="com.cjteam.xiao.promotion">
+        <level value="INFO"/>
+        <appender-ref ref="promotion"/>
+    </logger>
+
+    <logger name="com.phoenix" level="INFO"/>
+    <logger name="com.cjteam.xiao" level="INFO"/>
+    <logger name="com.cjteam.xiao.web" level="INFO"/>
+    <logger name="com.cjteam.xiao.service" level="INFO"/>
+    <logger name="com.cjteam.xiao.model" level="INFO"/>
+    <logger name="com.cjteam.xiao.dao" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="crap"/>
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>

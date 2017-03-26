@@ -1,0 +1,63 @@
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://182.92.66.201:3306/xiaohua?characterEncoding=utf8&&zeroDateTimeBehavior=converttonull
+jdbc.username=root
+jdbc.password=cjteamDB
+
+sys.conf.ip.user.limit=ip.user.limit
+sys.conf.one.day.times.alipaydrawout=one.day.times.alipaydrawout
+sys.conf.one.day.times.telphone.exchange=one.day.times.telphone.exchange
+sys.conf.one.day.times.qb.exchange=one.day.times.qb.exchange
+sys.conf.banner.ad.visible=banner.ad.visible
+sysconf_daily_money_exchange_limit=daily.money.exchange.limit
+sys.conf.one.day.money.limit.exchange=one.day.money.limit.exchange
+
+sys.conf.coinsmall.button.visible=button.coinsmall.visible
+sys.conf.crap.issue-duration-minutes=crap.issue-duration-minutes
+sys.conf.homepage.recommend.channel.code=homepage.recommend.channel-code
+
+ios.message.provider.key_pass=duohuiwang
+ios.message.provider.key_store_file=webapp-new\\src\\main\\resources\\score.p12
+ios.message.provider.production=true
+
+## execute every day at 00:00:00
+## schedule.cron.crap.issue.init=0 0 0 *  * ?
+schedule.cron.crap.issue.init=0 0 0 * *  ?
+schedule.cron.crap.issue.manage=0 */3 * * *  ?
+#schedule.cron.crap.issue.manage=0/30 * * * *  ?
+schedule.cron.crap.issue.lottery=0 */1 * * * ?
+#schedule.cron.crap.issue.lottery=0 0/1 * * * ?
+
+##online
+schedule.cron.exchange.fix.lost=* */7 * * * ?
+##test
+#schedule.cron.exchange.fix.lost=*/5 * * * * ?
+##onlie
+schedule.cron.exchange.fix.manual=0 30 23 * * ?
+##test
+#schedule.cron.exchange.fix.manual=0 */10 * * * ?
+
+#ios core call back interface
+award.security.youmi=_7xV*@19YF#ua3AlvsY3$WG0n_e7qe
+award.security.duomeng=Ta*f(%qSLEMeZ3U#HCo*L_c4r5(Jxv
+award.security.yijifen=vNp_GYnSvS)-dcKWtl&!NX$J#hDrYg
+award.security.topjoy=s@@G7)fzpGxicxkD9m-chzwooZ15Sw
+award.security.aipu=G5UNGGFVjGHGlWXbEUKm6b_3-RG(nV
+award.security.dianru=LWc4Sfm&p0e3l77p$g3RaW-Pk2eb4!
+award.security.limei=o!RI&s$!fKky&Eq5Z2lw_1eZr37Pp$
+award.security.adwo=h3lV!ub#!7mQmy6AvxiuM)J4xpThM(
+award.security.miidi=-5lI-7_voZicV&*gemoh0UqvuOyVAA
+award.security.guomob=@suXT!Z!DbJDHtS3Uoys-mR1vnMkw8
+
+
+YOUMI.sec=b921f818e095e4d1
+DIANRU.sec=4fce4f492433dea234665783427dc740
+DUOMENG.sec=d497bc55
+MIIDI.sec=ednldzklgp6pwql4msehrwfw0rg4c7
+APPID.DIANRU=6029
+ADWO.sec=xr738kf3
+APPID.ADWO=a987dee77caa4e83923b9bfa61ded397
+ios.version=review
+PICBasicPath=/opt/file/mrile
+PICUrlBasic = http://mrilecdn.sinaapp.com
+
+

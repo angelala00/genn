@@ -1,0 +1,59 @@
+# Configure Main Scheduler Properties
+# The second node must modify isntanceName
+org.quartz.scheduler.instanceName = QuartzScheduler1
+org.quartz.scheduler.instanceId = AUTO
+
+# Configure ThreadPool
+org.quartz.threadPool.threadCount = 10
+org.quartz.threadPool.threadPriority = 5
+org.quartz.threadPool.class = org.quartz.simpl.SimpleThreadPool
+org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
+
+# Using RAMJobStore
+## if using RAMJobStore, please be sure that you comment out the following
+## - org.quartz.jobStore.tablePrefix, 
+## - org.quartz.jobStore.driverDelegateClass, 
+## - org.quartz.jobStore.dataSource
+#org.quartz.jobStore.class = org.quartz.simpl.RAMJobStore
+
+# Using JobStoreTX
+## Be sure to run the appropriate script(under docs/dbTables) first to create tables
+org.quartz.jobStore.class = org.quartz.impl.jdbcjobstore.JobStoreTX
+
+# Configuring JDBCJobStore with the Table Prefix
+org.quartz.jobStore.tablePrefix = QRTZ_
+
+# Using DriverDelegate
+#org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+#org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+# Using datasource
+org.quartz.jobStore.dataSource = qzDS
+
+# Cluster
+org.quartz.jobStore.isClustered = true
+org.quartz.jobStore.clusterCheckinInterval = 60000
+
+# Define the datasource to use
+#[MySQL] 
+org.quartz.dataSource.qzDS.driver = com.mysql.jdbc.Driver
+org.quartz.dataSource.qzDS.URL = jdbc:mysql://182.92.66.201:3306/xiaohua?characterEncoding=utf8&&zeroDateTimeBehavior=converttonull
+org.quartz.dataSource.qzDS.user = root
+org.quartz.dataSource.qzDS.password =cjteamDB
+
+#org.quartz.dataSource.qzDS.URL = ${jdbc.url}
+#org.quartz.dataSource.qzDS.user = ${jdbc.username}
+#org.quartz.dataSource.qzDS.password = ${jdbc.password}
+#org.quartz.dataSource.qzDS.maxConnections = 5    
+
+#org.quartz.dataSource.qzDS.jndiURL = ${org.quartz.dataSource.qzDS.jndiURL}
+
+org.quartz.scheduler.skipUpdateCheck=true
+
+
+#[ORACLE]
+#org.quartz.dataSource.qzDS.driver = oracle.jdbc.driver.OracleDriver
+#org.quartz.dataSource.qzDS.URL = jdbc:oracle:thin:@bb-art-dbs06.bb01:1521:dw
+#org.quartz.dataSource.qzDS.user = qpages
+#org.quartz.dataSource.qzDS.password = qpages
+#org.quartz.dataSource.qzDS.maxConnections = 30 

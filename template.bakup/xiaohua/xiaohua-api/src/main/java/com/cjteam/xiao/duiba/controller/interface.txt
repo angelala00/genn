@@ -1,0 +1,19 @@
+/**
+** 创建免登录的兑换页面URL，提供给iso客户端使用；请求参数：userId必须
+**/
+/dui/creditAutoLoginUrl/
+
+/**
+**用户积分查询：兑吧使用
+**/
+/dui/credit/
+
+/**
+**积分消费：兑吧使用
+**/
+/dui/creditConsume/
+
+/**
+**积分消费结果通知：兑吧使用
+**/
+/dui/parseCreditNotify/

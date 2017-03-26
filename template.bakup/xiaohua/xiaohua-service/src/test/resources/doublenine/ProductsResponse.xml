@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+    <product id="1000" name="安徽移动100元快充" price="9845" info="运营商:移动;省份:安徽;面额:100"/>
+    <product id="1001" name="北京移动100元快充" price="9845" info="运营商:移动;省份:北京;面额:100"/>
+</products>
