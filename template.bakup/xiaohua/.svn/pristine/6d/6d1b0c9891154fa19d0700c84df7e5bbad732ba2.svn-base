@@ -1,0 +1,19 @@
+//include "common", "model", "service",  "statistics"
+
+//include 'base-web'
+
+//include 'baidu-pics'
+
+//include  "promotion"
+
+//include 'duiba'
+
+//include 'zuiquan'
+
+include "webapp-new"
+
+//信鸽消息推送：http://xg.qq.com/
+//include 'xinge'
+
+//include 'xiaohua-web'
+
