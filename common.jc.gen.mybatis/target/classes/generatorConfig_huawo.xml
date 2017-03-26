@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		
+		<commentGenerator type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.DBCommentGenerator">
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否取消生成注释代时间戳-->
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.16.0.7:3306/zcoolweb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="zcool" password="zcool" />
+		<javaModelGenerator targetPackage="com.zcool.model" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/zcool-community/zcool-dao/src/main/java" />
+		<sqlMapGenerator targetPackage="com.zcool.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/zcool-community/zcool-dao/src/main/resources" />
+		<javaClientGenerator targetPackage="com.zcool.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/zcool-community/zcool-dao/src/main/java" type="XMLMAPPER" />
+		
+		<table schema="zcoolweb" tableName="home_recommend"/>
+		
+	</context>
+</generatorConfiguration>

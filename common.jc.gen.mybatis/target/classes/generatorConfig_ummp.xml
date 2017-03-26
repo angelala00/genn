@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.UseGeneratedKeysPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.MySQLLimitPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.ModelChangePlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.AddExcuteSqlPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.SqlMapGeneratedOverridePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		
+		<commentGenerator type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.DBCommentGenerator">
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否取消生成注释代时间戳-->
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://182.92.66.201:3306/ummp?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="root" password="root" />
+		<javaModelGenerator targetPackage="com.eloancn.ummp.model" targetProject="/Users/jiangchi/Documents/workspace/ummpp/src/main/java" />
+		<sqlMapGenerator targetPackage="com.eloancn.ummp.persistence" targetProject="/Users/jiangchi/Documents/workspace/ummpp/src/main/resources" />
+		<javaClientGenerator targetPackage="com.eloancn.ummp.persistence" targetProject="/Users/jiangchi/Documents/workspace/ummpp/src/main/java" type="XMLMAPPER" />
+
+<!-- 		<table schema="ummp" tableName="tb_employee_has_tb_function_list2"/> -->
+		<table schema="ummp" tableName="tb_employee"/>
+<!-- 		<table schema="ummp" tableName="tb_function_list"/> -->
+		<table schema="ummp" tableName="tb_pre_config"/>
+<!-- 		<table schema="ummp" tableName="tb_pre_server"/> -->
+<!-- 		<table schema="ummp" tableName="tb_pre_server_has_tb_project"/> -->
+<!-- 		<table schema="ummp" tableName="tb_project"/> -->
+<!-- 		<table schema="ummp" tableName="tb_department"/> -->
+		<table schema="ummp" tableName="tb_online_config"/>
+		
+	</context>
+</generatorConfiguration>

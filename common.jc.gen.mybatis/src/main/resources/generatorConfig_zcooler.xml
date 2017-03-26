@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="/Users/jiangchi/.m2/repository/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar" />
+	<context id="context1" targetRuntime="MyBatis3">
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.UseGeneratedKeysPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.MySQLLimitPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.ModelChangePlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.AddExcuteSqlPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.SqlMapGeneratedOverridePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<commentGenerator>
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否取消生成注释代时间戳-->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.16.0.6:3306/zcooler?useUnicode=true&amp;characterEncoding=UTF-8" userId="zcool" password="zcool" />
+		<javaModelGenerator targetPackage="com.zcool.zcooler.model" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/source/zcooler/zcooler-model/src/main/java" />
+		<sqlMapGenerator targetPackage="com.zcool.zcooler.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/source/zcooler/zcooler-model/src/main/resources" />
+		<javaClientGenerator targetPackage="com.zcool.zcooler.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/zcool/source/zcooler/zcooler-model/src/main/java" type="XMLMAPPER" />
+		
+		
+<!-- 		<table schema="zcooler" tableName="advertisement"/> -->
+<!-- 		<table schema="zcooler" tableName="alipay_notify"/> -->
+<!-- 		<table schema="zcooler" tableName="arbitrate"/> -->
+<!-- 		<table schema="zcooler" tableName="category"/> -->
+<!-- 		<table schema="zcooler" tableName="citys"/> -->
+<!-- 		<table schema="zcooler" tableName="clickqq"/> -->
+<!-- 		<table schema="zcooler" tableName="dictionary"/> -->
+<!-- 		<table schema="zcooler" tableName="dictionary_config"/> -->
+<!-- 		<table schema="zcooler" tableName="exam_image"/> -->
+<!-- 		<table schema="zcooler" tableName="fund_deposit"/> -->
+<!-- 		<table schema="zcooler" tableName="fund_flow_no"/> -->
+<!-- 		<table schema="zcooler" tableName="fund_withdraw"/> -->
+<!-- 		<table schema="zcooler" tableName="fund_withdraw_batch"/> -->
+<!-- 		<table schema="zcooler" tableName="index_cate"/> -->
+<!-- 		<table schema="zcooler" tableName="index_cate_product"/> -->
+<!-- 		<table schema="zcooler" tableName="index_cate_designer"/> -->
+<!-- 		<table schema="zcooler" tableName="index_keyword"/> -->
+<!-- 		<table schema="zcooler" tableName="keyword"/> -->
+<!-- 		<table schema="zcooler" tableName="keyword_filter"/> -->
+<!-- 		<table schema="zcooler" tableName="message"/> -->
+<!-- 		<table schema="zcooler" tableName="message_batch"/> -->
+<!-- 		<table schema="zcooler" tableName="message_session"/> -->
+<!-- 		<table schema="zcooler" tableName="notice"/> -->
+<!-- 		<table schema="zcooler" tableName="order_vip"/> -->
+<!-- 		<table schema="zcooler" tableName="product"/> -->
+<!-- 		<table schema="zcooler" tableName="product_comment"/> -->
+<!-- 		<table schema="zcooler" tableName="product_image"/> -->
+<!-- 		<table schema="zcooler" tableName="project"/> -->
+<!-- 		<table schema="zcooler" tableName="project_appraise"/> -->
+<!-- 		<table schema="zcooler" tableName="project_deal_record"/> -->
+<!-- 		<table schema="zcooler" tableName="project_file"/> -->
+<!-- 		<table schema="zcooler" tableName="project_operate_record"/> -->
+<!-- 		<table schema="zcooler" tableName="report"/> -->
+<!-- 		<table schema="zcooler" tableName="simple_requirement"/> -->
+<!-- 		<table schema="zcooler" tableName="site_dynamics"/> -->
+<!-- 		<table schema="zcooler" tableName="suggest"/> -->
+<!-- 		<table schema="zcooler" tableName="trade_record"/> -->
+<!-- 		<table schema="zcooler" tableName="user"/> -->
+<!-- 		<table schema="zcooler" tableName="user_company"/> -->
+<!-- 		<table schema="zcooler" tableName="user_exam"/> -->
+<!-- 		<table schema="zcooler" tableName="user_identification"/> -->
+<!-- 		<table schema="zcooler" tableName="user_fund"/> -->
+<!-- 		<table schema="zcooler" tableName="user_privacy"/> -->
+<!-- 		<table schema="zcooler" tableName="user_pwd"/> -->
+<!-- 		<table schema="zcooler" tableName="vip_active_code"/> -->
+	</context>
+</generatorConfiguration>

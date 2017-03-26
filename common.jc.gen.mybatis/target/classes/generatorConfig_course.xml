@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="/Users/jiangchi/.m2/repository/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar" />
+	<context id="context1" targetRuntime="MyBatis3">
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.UseGeneratedKeysPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.MySQLLimitPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.ModelChangePlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.AddExcuteSqlPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.SqlMapGeneratedOverridePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<commentGenerator>
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否取消生成注释代时间戳-->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://182.92.66.201:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="root" password="cjteamDB" />
+		<javaModelGenerator targetPackage="com.gj.course.model" targetProject="/Users/jiangchi/Documents/workspace_code/source/course/course-model/src/main/java" />
+		<sqlMapGenerator targetPackage="com.gj.course.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/course/course-model/src/main/resources" />
+		<javaClientGenerator targetPackage="com.gj.course.persistence" targetProject="/Users/jiangchi/Documents/workspace_code/source/course/course-model/src/main/java" type="XMLMAPPER" />
+		
+		<table schema="mydb" tableName="course"/>
+		<table schema="mydb" tableName="catetory"/>
+		<table schema="mydb" tableName="tag"/>
+		<table schema="mydb" tableName="chapter"/>
+		
+	</context>
+</generatorConfiguration>

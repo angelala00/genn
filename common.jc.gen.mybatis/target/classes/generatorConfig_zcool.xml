@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.UseGeneratedKeysPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.MySQLLimitPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.ModelChangePlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.AddExcuteSqlPlugin" />
+		<plugin type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.SqlMapGeneratedOverridePlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		
+		<commentGenerator type="easyui_springmvc_jpa.aaaaaaaaaaaaaaaaaaaaaaa.DBCommentGenerator">
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否取消生成注释代时间戳-->
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.16.0.7:3306/zcoolweb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="zcool" password="zcool" />
+		<javaModelGenerator targetPackage="com.zcool.model" targetProject="/Users/jiangchi/Documents/workspace/zcool-community-4.0/zcool-zweb/zweb-dao/src/main/java" />
+		<sqlMapGenerator targetPackage="com.zcool.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community-4.0/zcool-zweb/zweb-dao/src/main/resources" />
+		<javaClientGenerator targetPackage="com.zcool.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community-4.0/zcool-zweb/zweb-dao/src/main/java" type="XMLMAPPER" />
+
+		
+<!-- 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.16.0.7:3306/zcoolstatistics?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="zcool" password="zcool" /> -->
+<!-- 		<javaModelGenerator targetPackage="com.zcool.zcoolstatistics.model" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/java" /> -->
+<!-- 		<sqlMapGenerator targetPackage="com.zcool.zcoolstatistics.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/resources" /> -->
+<!-- 		<javaClientGenerator targetPackage="com.zcool.zcoolstatistics.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/java" type="XMLMAPPER" /> -->
+<!-- 		<table schema="zcoolstatistics" tableName="statistics_charts"/> -->
+		
+
+		
+<!-- 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.16.0.6:3306/zcoollog?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=converttonull" userId="zcool" password="zcool" /> -->
+<!-- 		<javaModelGenerator targetPackage="com.zcool.zcoollog.model" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/java" /> -->
+<!-- 		<sqlMapGenerator targetPackage="com.zcool.zcoollog.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/resources" /> -->
+<!-- 		<javaClientGenerator targetPackage="com.zcool.zcoollog.persistence" targetProject="/Users/jiangchi/Documents/workspace/zcool-community/zcool-dao/src/main/java" type="XMLMAPPER" /> -->
+<!-- 		<table schema="zcoolweb" tableName="downlog"/> -->
+		
+
+<!-- 		<table schema="zcoolweb" tableName="activity"/> -->
+		<table schema="zcoolweb" tableName="member"/>
+<!-- 		<table schema="zcoolweb" tableName="member_data"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_privacy"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_profile"/> -->
+<!-- 		<table schema="zcoolweb" tableName="at"/> -->
+<!-- 		<table schema="zcoolweb" tableName="comments" /> -->
+<!-- 		<table schema="zcoolweb" tableName="article"/> -->
+<!-- 		<table schema="zcoolweb" tableName="product"/> -->
+<!-- 		<table schema="zcoolweb" tableName="focus"/> -->
+<!-- 		<table schema="zcoolweb" tableName="recommend"/> -->
+<!-- 		<table schema="zcoolweb" tableName="favorite"/> -->
+<!-- 		<table schema="zcoolweb" tableName="favorite_folder"/> -->
+<!-- 		<table schema="zcoolweb" tableName="white_list"/> -->
+<!-- 		<table schema="zcoolweb" tableName="message"/> -->
+<!-- 		<table schema="zcoolweb" tableName="mycate"/> -->
+<!-- 		<table schema="zcoolweb" tableName="app_version"/> -->
+<!-- 		<table schema="zcoolweb" tableName="focuspic"/> -->
+<!-- 		<table schema="zcoolweb" tableName="bulletin"/> -->
+<!-- 		<table schema="zcoolweb" tableName="gbook"/> -->
+<!-- 		<table schema="zcoolweb" tableName="app_setting"/> -->
+<!-- 		<table schema="zcoolweb" tableName="faq"/> -->
+<!-- 		<table schema="zcoolweb" tableName="common_gbook_blocked"/> -->
+<!-- 		<table schema="zcoolweb" tableName="banned_word"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_honor"/> -->
+<!-- 		<table schema="zcoolweb" tableName="feedback"/> -->
+<!-- 		<table schema="zcoolweb" tableName="message_session"/> -->
+<!-- 		<table schema="zcoolweb" tableName="product_image"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_last_view_time"/> -->
+<!-- 		<table schema="zcoolweb" tableName="category"/> -->
+<!-- 		<table schema="zcoolweb" tableName="city"/> -->
+<!-- 		<table schema="zcoolweb" tableName="event"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_devices"/> -->
+<!-- 		<table schema="zcoolweb" tableName="point_detail"/> -->
+<!-- 		<table schema="zcoolweb" tableName="member_last_view_time"/> -->
+<!-- 		<table schema="zcoolweb" tableName="file"/> -->
+<!-- 		<table schema="zcoolweb" tableName="sucai"/> -->
+<!-- 		<table schema="zcoolweb" tableName="shows"/> -->
+<!-- 		<table schema="zcoolweb" tableName="viewlog"/> -->
+<!-- 		<table schema="zcoolweb" tableName="shows_image"/> -->
+<!-- 		<table schema="zcoolweb" tableName="property"/> -->
+<!-- 		<table schema="zcoolweb" tableName="devices"/> -->
+<!-- 		<table schema="zcoolweb" tableName="honor"/> -->
+<!-- 		<table schema="zcoolweb" tableName="awards"/> -->
+<!-- 		<table schema="zcoolweb" tableName="newtag"/> -->
+<!-- 		<table schema="zcoolweb" tableName="devices_type"/> -->
+<!-- 		<table schema="zcoolweb" tableName="devices_brand"/> -->
+<!-- 		<table schema="zcoolweb" tableName="school"/> -->
+<!-- 		<table schema="zcoolweb" tableName="brand"/> -->
+<!-- 		<table schema="zcoolweb" tableName="advertisement"/> -->
+
+<!-- 		<table schema="zcoolweb" tableName="top_list"/> -->
+<!-- 		<table schema="zcoolweb" tableName="home_recommend"/> -->
+<!-- 		<table schema="zcoolweb" tableName="advertisement_in"/> -->
+<!-- 		<table schema="zcoolweb" tableName="dic_tools"/> -->
+<!-- 		<table schema="zcoolweb" tableName="dic_profession"/> -->
+<!-- 		<table schema="zcoolweb" tableName="product_tools"/> -->
+<!-- 		<table schema="zcoolweb" tableName="article_cates"/> -->
+		<table schema="zcoolweb" tableName="member_company"/>
+		<table schema="zcoolweb" tableName="member_company_enterprise"/>
+		<table schema="zcoolweb" tableName="member_company_studio"/>
+		<table schema="zcoolweb" tableName="member_company_home_picture"/>
+		
+	</context>
+</generatorConfiguration>
