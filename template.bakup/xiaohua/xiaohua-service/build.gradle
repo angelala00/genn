@@ -53,7 +53,7 @@ dependencies {
         exclude module: 'commons-logging'
     }
 
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.11'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
     compile 'org.codehaus.jackson:jackson-core-asl:1.8.2'
     compile 'org.codehaus.jackson:jackson-mapper-asl:1.8.2'
 
